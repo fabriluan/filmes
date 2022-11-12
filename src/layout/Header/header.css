@@ -1,0 +1,35 @@
+header{
+    background-color: #03070E;
+    padding: 20px;
+}
+header > .center{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header a{
+    text-decoration: none;
+}
+header h2{
+    font-size: 26px;
+}
+header ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+header ul li{
+    margin: 0 5px;
+}
+header ul li a{
+    font-size: 19px;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+header ul li:nth-child(3) a{
+    color: black;
+    background-color: #F0DAC3;
+    border-radius: 0.5rem;
+}

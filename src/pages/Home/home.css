@@ -1,0 +1,13 @@
+.section_home{
+    padding: 20px 0;
+}
+.banner_movies{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    border-radius: 0.7rem;
+    background-color: red;
+    background-size: cover;
+}
