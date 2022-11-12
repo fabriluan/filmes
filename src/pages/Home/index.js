@@ -1,7 +1,7 @@
 import api from "../../service/api";
 import { useEffect, useState } from "react";
 import "./home.css";
-import List from "../../components/List";
+import ListMovie from "../../components/ListMovie";
 
 function Home(){
 
@@ -28,9 +28,10 @@ function Home(){
                 <section className="banner_movies" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${banner})`}}>
                     <h2>Filmes em cartaz</h2>
                 </section>
-
-                <List />
             </div>
+
+            <ListMovie title={'Filmes em cartaz'} direct={"/movie/now_playing"}/>
+            
         </section>
     )
 }
