@@ -1,11 +1,13 @@
 import api from "../../service/api";
+import { Link } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import "./listmovie.css"
 
-function ListMovie({title, direct}){
+function ListMovie({title, direct, link}){
 
-    const [movie, setMovie] = useState([])
+    const [movie, setMovie] = useState([]);
+    const [load, setLoad] = useState(true);
     const center = useRef(null);
     const movieTam = useRef(null);
 
@@ -19,6 +21,7 @@ function ListMovie({title, direct}){
             })
 
             setMovie(response.data.results);
+            setLoad(false);
         }
 
         LoadMovies();
@@ -37,6 +40,16 @@ function ListMovie({title, direct}){
         center.current.scrollLeft -=  tam;
     }
 
+    if(load){
+        return(
+            <section className="section_carroseul">
+                <section className="load">
+                    <h2>Carregando</h2>
+                </section>
+            </section>
+        )
+    }
+
     return(
         <section className="section_carroseul">
         
@@ -46,9 +59,9 @@ function ListMovie({title, direct}){
                 {movie.map((movi) =>{
                     return(
                         <div className="list_movie" key={movi.id} ref={movieTam}>
-                            <img src={`https://image.tmdb.org/t/p/original${movi.poster_path}`} alt={movi.title} />
+                            <img src={`https://image.tmdb.org/t/p/w500${movi.poster_path}`} alt={movi.title} />
 
-                            <button>Ver Mais</button>
+                            <Link to={`${link}/${movi.id}`}><button>Ver Mais</button></Link>
                         </div>
                     )
                 })}

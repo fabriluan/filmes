@@ -1,0 +1,39 @@
+footer{
+    background-color: #03070E;
+    padding: 20px;
+    text-align: center;
+}
+footer span{
+    display: block;
+    margin-top: 35px;
+}
+footer > .center{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.info_about a{
+    cursor: pointer;
+    font-size: 35px;
+    padding: 5px 10px 0px 10px;
+    margin: 0 10px;
+    border-radius: 1.5rem;
+}
+.info_about a:hover{
+    border: 1px solid white;
+    font-size: 38px;
+    transition: 0.7s;
+}
+section.info_api, section.info_about{
+    width: 50%;
+    text-align: center;
+}
+.info_api h2, .info_about h2{
+    font-weight: 300;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.info_api img{
+    width: 30%;
+}

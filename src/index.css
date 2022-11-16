@@ -17,3 +17,15 @@ html,body{
   max-width: 86vw;
   margin: 0 auto;
 }
+.load{
+  width: 100%;
+  text-align: center;
+  margin: 50px 0;
+}
+.load h2{
+  font-size: 28px;
+  font-weight: 300;
+}
+.load h2:after{
+  content: '...';
+}

@@ -16,7 +16,9 @@ function Home(){
                 }
             })
             
-            setBanner(response.data.results[1].backdrop_path);
+            setBanner(response.data.results[0].backdrop_path);
+            // setBanner(response.data.results);
+
         }
 
         LoadBanner()
@@ -26,12 +28,18 @@ function Home(){
         <section className="section_home">
             <div className="center">
                 <section className="banner_movies" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${banner})`}}>
-                    <h2>Filmes em cartaz</h2>
+                    <h2>Os melhores filmes você só encontra aqui</h2>
                 </section>
             </div>
 
-            <ListMovie title={'Filmes em cartaz'} direct={"/movie/now_playing"}/>
-            
+            <ListMovie title={'Filmes em cartaz'} direct={"/movie/now_playing"} link={'filmes'}/>
+            <ListMovie title={'Filmes em alta'} direct={"/movie/popular"} link={'filmes'}/>
+            <ListMovie title={'Filmes melhores avaliados'} direct={"/movie/top_rated"} link={'filmes'}/>
+
+            <ListMovie title={'Séries em lançamento'} direct={"/tv/on_the_air"} link={'series'}/>
+            <ListMovie title={'Séries em alta'} direct={"/tv/popular"} link={'series'}/>
+            <ListMovie title={'Séries melhores avaliadas'} direct={"/tv/top_rated"} link={'series'}/>
+
         </section>
     )
 }
