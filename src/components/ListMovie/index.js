@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import "./listmovie.css"
+import Load from "../Load";
 
-function ListMovie({title, direct, link}){
+function ListMovie({title, direct, link, href}){
 
     const [movie, setMovie] = useState([]);
     const [load, setLoad] = useState(true);
@@ -42,16 +43,12 @@ function ListMovie({title, direct, link}){
 
     if(load){
         return(
-            <section className="section_carroseul">
-                <section className="load">
-                    <h2>Carregando</h2>
-                </section>
-            </section>
+            <Load/>
         )
     }
 
     return(
-        <section className="section_carroseul">
+        <section className="section_carroseul" id={href}>
         
             <h2>{title}</h2>
 

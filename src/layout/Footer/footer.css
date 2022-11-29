@@ -1,4 +1,5 @@
 footer{
+    margin-top: auto;
     background-color: #03070E;
     padding: 20px;
     text-align: center;
@@ -21,8 +22,7 @@ footer > .center{
     border-radius: 1.5rem;
 }
 .info_about a:hover{
-    border: 1px solid white;
-    font-size: 38px;
+    font-size: 37px;
     transition: 0.7s;
 }
 section.info_api, section.info_about{
@@ -36,4 +36,26 @@ section.info_api, section.info_about{
 }
 .info_api img{
     width: 30%;
+}
+
+@media screen and (max-width: 700px) {
+    footer > .center{
+        flex-direction: column;
+        align-items: center;
+    }
+    .info_about{
+        margin: 20px 0;
+    }
+    .info_api{
+        margin: 20px 0;
+    }
+    .info_api img{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 550px){
+    .about_rd{
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     width: 100%;
     padding: 20px 0;
     background-color: #233842;
@@ -28,7 +29,7 @@
     display: none;
 }
 .list_movie{
-    min-width: 22%;
+    min-width: 250px;
     margin-right: 10px;
 }
 .list_movie img{
@@ -47,7 +48,10 @@
     background-color: #003350;
     cursor: pointer;
 }
-
+.list_movie button:hover{
+    background-color: #00273d;
+    transition: 0.6s;
+}
 .group_btn{
     width: 86vw;
     margin: 0 auto;
@@ -64,4 +68,13 @@
     font-size: 40px;
     border: none;
     outline: none;
+}
+.group_btn button:hover{
+    transform: scale(1.01);
+}
+
+@media screen and (max-width: 785px) {
+    .group_btn{
+        display: none;
+    }
 }

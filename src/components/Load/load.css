@@ -1,0 +1,12 @@
+.load{
+    width: 100%;
+    text-align: center;
+    margin: 50px 0;
+  }
+  .load h2{
+    font-size: 28px;
+    font-weight: 300;
+  }
+  .load h2:after{
+    content: '...';
+  }

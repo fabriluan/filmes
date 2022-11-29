@@ -1,6 +1,10 @@
 header{
+    width: 100%;
     background-color: #03070E;
     padding: 20px;
+    position: fixed;
+    margin-top: -76px;
+    z-index: 99;
 }
 header > .center{
     display: flex;
@@ -10,26 +14,115 @@ header > .center{
 }
 header a{
     text-decoration: none;
+    cursor: pointer;
 }
 header h2{
     font-size: 26px;
 }
-header ul{
+header ul.desktop{
     display: flex;
     flex-direction: row;
     list-style: none;
 }
-header ul li{
-    margin: 0 5px;
+header ul.desktop li{
+    margin: 0 8px;
 }
-header ul li a{
-    font-size: 19px;
+header ul.desktop li a{
+    position: relative;
+    font-size: 1.2rem;
     font-weight: 500;
     padding: 5px 10px;
 }
 
-header ul li:nth-child(3) a{
+header ul.desktop li:nth-child(1) a:after,
+header ul.desktop li:nth-child(2) a:after{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    background-color: white;
+    height: 1px;
+    content: '';
+}
+
+header ul.desktop li:nth-child(1) a::before,
+header ul.desktop li:nth-child(2) a::before{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 0%;
+    background-color: white;
+    height: 1px;
+    content: '';
+}
+
+header ul.desktop li:nth-child(1) a:hover::before,
+header ul.desktop li:nth-child(2) a:hover::before,
+header ul.desktop li:nth-child(1) a:hover::after,
+header ul.desktop li:nth-child(2) a:hover::after{
+    width: 100%;    
+    left: 0;
+    transition: 0.6s;
+}
+
+header ul.desktop li:nth-child(3) a{
     color: black;
     background-color: #F0DAC3;
     border-radius: 0.5rem;
+}
+header ul.desktop li:nth-child(3) a:hover{
+    color: #F0DAC3;
+    border: 1px solid #F0DAC3;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.6s;
+}
+
+.icons{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 36px;
+}
+
+header ul.app{
+    position: absolute;
+    right: 0;
+    top: 76px;
+
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    background-color: #000c13e7;
+    display: none;
+    flex-direction: row;
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+}
+header ul.app li{
+    width: 100%;
+    text-align: center;
+}
+header ul.app li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 19px;
+    padding: 10% 0;
+    border-bottom: 1px solid white;
+}
+header ul.app li a:hover{
+    background-color: #001c2c;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 785px) {
+
+    header ul.desktop{
+        display: none;
+    }
+    .icons{
+        display: flex;
+    }
 }

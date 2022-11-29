@@ -1,10 +1,13 @@
-import { useEffect } from "react";
 import RoutesApp from "./routes";
-import api from "./service/api";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
-    <RoutesApp />
+    <>
+      <ToastContainer theme="colored" autoClose={3000}/>
+      <RoutesApp />
+    </>
   )
 }
 
