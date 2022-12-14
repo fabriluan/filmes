@@ -1,0 +1,20 @@
+.error{
+    height: 80vh;
+    background-color: #f1e2d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.error h2{
+    color: black;
+    font-size: 29px;
+    margin-bottom: 25px;
+}
+.error a{
+    color: white;
+    text-decoration: none;
+    background-color: #03070E;
+    padding: 10px;
+    border-radius: 1.5rem;
+}

@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Favoritos from "./pages/Favoritos";
 import Movie from "./pages/Movie";
 import Seasson from "./pages/Seasson";
+import Error from "./pages/Error";
 
 function RoutesApp(){
     return(
@@ -21,6 +22,7 @@ function RoutesApp(){
                 <Route path="/favoritos" element={ <Favoritos/> } /> 
                 <Route path="/filmes/:id" element={ <Movie/> } /> 
                 <Route path="/series/:id" element={ <Seasson/> } /> 
+                <Route path="*" element={ <Error/> } /> 
             </Routes>
             <Footer/>
         </BrowserRouter>
